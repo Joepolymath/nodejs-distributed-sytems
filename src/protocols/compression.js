@@ -18,7 +18,7 @@ const startCompressionServer = () => {
       if (acceptEncoding.includes('gzip')) {
         console.log('encoding with gzip');
         response.setHeader('Content-Encoding', 'gzip');
-        raw.pipe(zlib.createGzip().pipe(response));
+        raw.pipe(zlib.createGzip()).pipe(response);
       } else {
         console.log('no encoding');
         raw.pipe(response);
