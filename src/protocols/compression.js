@@ -26,6 +26,7 @@ const startCompressionServer = () => {
     })
     .listen(PORT, () => {
       console.log('Server running at port', PORT);
+      console.log(`Process ID ${process.pid}`);
     });
 };
 
